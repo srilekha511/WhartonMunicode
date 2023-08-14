@@ -1,9 +1,5 @@
+# Municode
 
-# tiny shakespeare, character-level
+Run prepare.py to output the number of training and validation tokens. The number of tokens outputted depends on the size of the municipal code file. This municode_char prepare.py file will output a different number of training and validation tokens from the municode prepare_py file. This is because the data is being tokenized on a character level. 
 
-Tiny shakespeare, of the good old char-rnn fame :) Treated on character-level.
-
-After running `prepare.py`:
-
-- train.bin has 1,003,854 tokens
-- val.bin has 111,540 tokens
+~ write some stuff on prepare.py ~
