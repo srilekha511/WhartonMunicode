@@ -10,6 +10,7 @@ if not os.path.exists(input_file_path):
     with open(input_file_path, 'w') as f:
         f.write(requests.get(data_url).text)
 
+# split training and validation data into 90:10 ratio, respectively
 with open(input_file_path, 'r') as f:
     data = f.read()
 n = len(data)
@@ -23,11 +24,8 @@ val_ids = enc.encode_ordinary(val_data)
 print(f"train has {len(train_ids):,} tokens")
 print(f"val has {len(val_ids):,} tokens")
 
-# export to bin files
+# export training and validation token ids to bin files
 train_ids = np.array(train_ids, dtype=np.uint16)
 val_ids = np.array(val_ids, dtype=np.uint16)
 train_ids.tofile(os.path.join(os.path.dirname(__file__), 'train.bin'))
 val_ids.tofile(os.path.join(os.path.dirname(__file__), 'val.bin'))
-
-# train.bin has 301,966 tokens
-# val.bin has 36,059 tokens
