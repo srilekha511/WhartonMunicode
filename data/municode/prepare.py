@@ -4,12 +4,16 @@ import tiktoken
 import numpy as np
 
 # download the tiny shakespeare dataset
-input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')
-if not os.path.exists(input_file_path):
-    data_url = 'https://github.com/srilekha511/municode_files/blob/main/AlvaradoTXComplete.txt'
-    with open(input_file_path, 'w') as f:
-        f.write(requests.get(data_url).text)
+data_url = 'https://github.com/srilekha511/municode_files/blob/main/AlvaradoTXComplete.txt'
+response = requests.get(data_url)
 
+if response.status_code == 200:
+    content = response.text
+    with open(os.path.basename(data_url), 'w') as f:
+        f.write(content)
+else:
+    print("Failed to download data.")
+    
 # split training and validation data into 90:10 ratio, respectively
 with open(input_file_path, 'r') as f:
     data = f.read()
