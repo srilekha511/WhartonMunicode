@@ -1,25 +1,19 @@
 import os
 import requests
-import tiktoken
-import numpy as np
 
-# download the tiny shakespeare dataset
 data_url = 'https://github.com/srilekha511/municode_files/blob/main/AlvaradoTXComplete.txt'
 response = requests.get(data_url)
 
 if response.status_code == 200:
     content = response.text
-    with open(os.path.basename(data_url), 'w') as f:
-        f.write(content)
 else:
     print("Failed to download data.")
-    
-# split training and validation data into 90:10 ratio, respectively
-with open(input_file_path, 'r') as f:
-    data = f.read()
-n = len(data)
-train_data = data[:int(n*0.9)]
-val_data = data[int(n*0.9):]
+    content = None
+
+if content is not None:
+    n = len(content)
+    train_data = content[:int(n * 0.9)]
+    val_data = content[int(n * 0.9):]
 
 # encode with tiktoken gpt2 bpe
 enc = tiktoken.get_encoding("gpt2")
