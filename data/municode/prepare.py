@@ -1,5 +1,7 @@
 import os
 import requests
+import tiktoken
+import numpy as np
 
 data_url = 'https://github.com/srilekha511/municode_files/blob/main/AlvaradoTXComplete.txt'
 response = requests.get(data_url)
