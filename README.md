@@ -1,5 +1,5 @@
 # Wharton_Municode
-A repository built off of [Andrej Karpathy's nanoGPT] (https://github.com/karpathy/nanoGPT): a smaller scale version of ChatGPT able to run on your personal computer. 
+A repository built off of [Andrej Karpathy's nanoGPT](https://github.com/karpathy/nanoGPT): a smaller scale version of ChatGPT able to run on your personal computer. 
 
 This repository is part of a project at the University of Pennsylvania aiming to adopt large language models - such as ChatGPT - for use in the legal space. It aims to lay foundational work for future implementation in this area. 
 
