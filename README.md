@@ -11,7 +11,7 @@ WhartonMunicode is designed, as the name suggests, to accept municipal codes as 
 
 These setup instructions are compatible for setting up and running this repository with Google Colab. However, these instructions nearly remain the same for setup in Jupyter Notebook or any other platform. 
 
-First, mount Google Drive onto the Colab interface. This is necessary to facilitate the cloning of the repository. If you are working on Jupyter Notebook or any other platform, skip this step (Jupyter is based on the local files of your computer, not a cloud platform)
+First, mount Google Drive onto the Colab interface. This is necessary to facilitate the cloning of the repository. If you are working on Jupyter Notebook or any other platform, skip this step (Jupyter is based on the local files of your computer, not a cloud platform).
 
 ```
 from google.colab import drive
