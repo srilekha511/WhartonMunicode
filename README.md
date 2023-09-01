@@ -65,7 +65,7 @@ WhartonMunicode will clone into the folder and will be visible upon refreshing t
 
 If you are in Google Colab:
 
-First change directories into the the municodes folder of this repository. Colab won't let you run files unless you are in the exact folder path containing it. Then, run the script prepare.py:
+First change directories into the the municodes folder of this repository. Colab won't let you run files unless you are in the exact folder path containing it. Then, run the script `prepare.py`:
 ```
 %cd /content/Wharton_Municode/data/municode
 !python prepare.py
