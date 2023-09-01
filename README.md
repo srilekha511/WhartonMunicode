@@ -41,11 +41,24 @@ This repository implements the same packages as nanoGPT:
 
 ## Cloning Repository
 
+If you are in Google Colab:
+
 Clone this repository to get a local copy in the platform of your choice. (Google Colab users will find the repository in the "Files" tab on the left hand vertical bar, while Jupyter Notebook users will find that the repository clones into the same folder path of the notebook)
 
 ```
 !git clone https://github.com/srilekha511/Wharton_Municode
 ```
+
+If you are in Jupyter Notebook:
+
+Cloning a Github repository must be done through the terminal. Navigate to the folder containing the .ipynb notebook. Click on the "New" dropdown menu on the upper right hand side and select "Terminal". In the terminal window, type:
+
+```
+git clone https://github.com/srilekha511/Wharton_Municode
+```
+
+WhartonMunicode will clone into the folder and will be visible upon refreshing the Jupyter Notebook interface. 
+
 ## Running prepare.py
 
 If you are in Google Colab:
@@ -56,7 +69,7 @@ First change directories into the the municodes folder of this repository. Colab
 !python prepare.py
 ```
 
-Your output should return the file path of the `train.bin` and the `val.bin`, most likely `/content/Wharton_Municode/data/municode`. The train.bin and val.bin files store the tokens of the training and validation files, respectively (tiktoken was used to tokenize the text to prepare it for training). 
+Your output should return the file path of the `train.bin` and the `val.bin`, which should most likely be `/content/Wharton_Municode/data/municode`. The `train.bin` and `val.bin` files store the tokens of the training and validation files, respectively (`tiktoken` was used to tokenize the text to prepare it for training). 
 The output should also print the number of training and validation tokens there are. For example, if we loaded in the municipal code for the city of Alvarado, Texas (the default dataset in this repository), it should print
 
 ```
@@ -64,3 +77,29 @@ train has 585,895 tokens
 val has 64,881 tokens
 ```
 The larger the number of tokens, the more data the machine learning algorithm can work with to make predictions. See `prepare.py` for a more in-depth explanation. 
+
+## Training prepare.py
+
+If you are in Google Colab:
+
+The `train.py` file is not in the data folder, so change directories out of it. Next, run `train.py` with the following settings:
+
+```
+%cd /content/Wharton_Municode
+!python train.py config/train_municode_char.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0
+```
+The `device` parameter can be changed to either a `cpu` or `gpu`, depending on the type of computer you have. 
+
+If all goes well, the output should print each iteration of training along with the respective loss and time taken. The loss should progressively decrease as the number of iterations becomes greater. The parameter `lr_decay_iters` defines the number of iterations before `train.py` stops running and is currently set to 2000. On a CPU such as a MacBook, this can take at least 10-20 minutes, while a GPU can complete it in about idk minutes. 
+
+## Viewing sample.py
+
+Now that the model is trained, we can see view the language generation that mimics that of the original dataset:
+
+```
+!python sample.py --out_dir=out-municode-char --device=cpu
+```
+As before, change the `device` parameter to `cpu` or `gpu` as necessary. 
+
+`sample.py` should start to output language similar to the municipal codes that were inputted. Keep in mind that WhartonMunicode is an elementary LLM and therefore its outputs have no semantical significance (yet). More advanced LLMs such as ChatGPT employ supervised human labeling to rank outputs to optimize outputs. 
+
