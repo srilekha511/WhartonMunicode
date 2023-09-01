@@ -135,3 +135,7 @@ Sec. 8-130.,Definitions.,"The city, or his words, in itsNULL
 
 ```
 Notice that the output employs similar words, symbols, and language as that of the municipal code. Running WhartonMunicode on the same dataset will return different outputs each time. 
+
+# More Municipal Codes
+
+To test more municipal codes other than Alvarado, TX, [this repository](https://github.com/srilekha511/municode_files) has `.txt` files of 10+ municipal codes. To input a new municipal code, simply copy the raw text file link (i.e. https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt). The `Raw` option is located on the right side of the upper toolbar. Simply copying the regular link instead of the raw link will prevent the entire municode from being read, resulting in less tokens than the correct amount. 
