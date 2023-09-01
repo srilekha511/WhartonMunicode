@@ -138,4 +138,20 @@ Notice that the output employs similar words, symbols, and language as that of t
 
 # More Municipal Codes
 
-To test more municipal codes other than Alvarado, TX, [this repository](https://github.com/srilekha511/municode_files) has `.txt` files of 10+ municipal codes. To input a new municipal code, simply copy the raw text file link (i.e. https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt). The `Raw` option is located on the right side of the upper toolbar. Simply copying the regular link instead of the raw link will prevent the entire municode from being read, resulting in less tokens than the correct amount. 
+To test more municipal codes other than Alvarado, TX, [this repository](https://github.com/srilekha511/municode_files) has `.txt` files of several other municipal codes. To input a new municipal code, simply copy the raw text file link 
+(i.e. https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt). 
+
+The `Raw` option is located on the right side of the upper toolbar. Simply copying the regular link instead of the raw link will prevent the entire municode from being read, resulting in less tokens than the correct amount. 
+
+## Convert CSV to TXT
+
+WhartonMunicode only takes in `.txt` file inputs. If you have municipal code data (or any data!), convert it from `.csv` to `.txt.`:
+
+```
+with open('/my/path/file/goes/here.csv', 'r') as f_in, open('mytextfile.txt', 'w') as f_out:
+    content = f_in.read()
+    f_out.write(content)
+```
+## Want Even More Municipal Codes?
+
+Scraper can be provided upon request, or use your own to get files from [municode](https://library.municode.com/)!
