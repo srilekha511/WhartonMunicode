@@ -61,6 +61,8 @@ git clone https://github.com/srilekha511/Wharton_Municode
 
 WhartonMunicode will clone into the folder and will be visible upon refreshing the Jupyter Notebook interface. 
 
+Note: You must have [Git](https://git-scm.com/downloads) installed, and you must be in the Jupyter Notebook folder path when cloning the repository. 
+
 ## Running prepare.py
 
 If you are in Google Colab:
