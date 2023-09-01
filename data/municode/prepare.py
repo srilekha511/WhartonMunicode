@@ -3,7 +3,7 @@ import requests
 import tiktoken
 import numpy as np
 
-data_url = 'https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt'
+data_url = 'https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt' # Change URL to Municipal code of choice
 response = requests.get(data_url)
 
 if response.status_code == 200:
