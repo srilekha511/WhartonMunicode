@@ -94,7 +94,7 @@ The `train.py` file is not in the data folder, so change directories out of it. 
 ```
 The `device` parameter can be changed to either a `cpu` or `gpu`, depending on the type of computer you have. 
 
-If all goes well, the output should print each iteration of training along with the respective loss and time taken. The loss should progressively decrease as the number of iterations becomes greater. The parameter `lr_decay_iters` defines the number of iterations before `train.py` stops running and is currently set to 2000. On a CPU such as a MacBook, this can take at least 10-20 minutes, while a GPU can complete it in about idk minutes. 
+If all goes well, the output should print each iteration of training along with the respective loss and time taken. The loss should progressively decrease as the number of iterations becomes greater. The parameter `lr_decay_iters` defines the number of iterations before `train.py` stops running and is currently set to 2000. On a CPU such as a MacBook, this can take at least 10-20 minutes, while a GPU can complete it in about 4-5 minutes or less. 
 
 ## Viewing sample.py
 
