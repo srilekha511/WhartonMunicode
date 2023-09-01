@@ -16,4 +16,16 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
+# Packages in Use
+
+This repository implements the same packages as nanoGPT:
+
+- [transformers](https://pypi.org/project/transformers/): HuggingFace package, "thousands of pretrained models to perform tasks on different modalities such as text, vision, and audio"
+- [datasets](https://pypi.org/project/datasets/): HuggingFace package, allows for more efficient data pre-processing
+- [tiktoken](https://github.com/openai/tiktoken): OpenAI's BPE tokenizer, takes in data and separates it into tokens for training
+- [tqdm](https://tqdm.github.io/): Python package for progress bars
+- [wandb](https://wandb.ai/site): "Weights and Biases", primarily used to track metrics such as accuracy and loss during model training and evaluation
+- [numpy](https://numpy.org/): Essential Python library to operate on datasets in multidimensional array or matrix form
+- [httpx](https://www.python-httpx.org/): Python web client package used to get data from websites
+- [torch](https://pytorch.org/): Python library using the PyTorch framework, used for various machine learning applications from NLP to computer vision to deep learning models.
 
