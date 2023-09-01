@@ -9,7 +9,7 @@ Wharton_Municode is designed, as the name suggests, to accept municipal codes as
 
 These setup instructions are compatible for setting up and running this repository with Google Colab. However, these instructions nearly remain the same for setup in Jupyter Notebook or any other platform. 
 
-First, mount Google Drive onto the Colab interface. This is necessary to facilitate the cloning of the repository. 
+First, mount Google Drive onto the Colab interface. This is necessary to facilitate the cloning of the repository. If you are working on Jupyter Notebook or any other platform, skip this step (Jupyter is based on the local files of your computer, not a cloud platform)
 
 ```
 from google.colab import drive
@@ -28,4 +28,12 @@ This repository implements the same packages as nanoGPT:
 - [numpy](https://numpy.org/): Essential Python library to operate on datasets in multidimensional array or matrix form
 - [httpx](https://www.python-httpx.org/): Python web client package used to get data from websites
 - [torch](https://pytorch.org/): Python library using the PyTorch framework, used for various machine learning applications from NLP to computer vision to deep learning models.
+
+  ## Using these Packages
+
+  Next, import these packages. This may take a few seconds to a minute depending on if these packages have been imported before, as well as the computing speed and power of your computer.
+
+  ```
+  pip install transformers datasets tiktoken tqdm wandb numpy httpx torch
+  ```
 
