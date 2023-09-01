@@ -105,3 +105,31 @@ As before, change the `device` parameter to `cpu` or `gpu` as necessary.
 
 `sample.py` should start to output language similar to the municipal codes that were inputted. Keep in mind that WhartonMunicode is an elementary LLM and therefore its outputs have no semantical significance (yet). More advanced LLMs such as ChatGPT employ supervised human labeling to rank outputs to optimize outputs. 
 
+Here is a short snippet of a sample output from training on the municipal code of Alvarado, TX:
+```
+                 It is prohibited by the terms of the inspector shall be maintained where the city ordinance or
+               to Local Government Code ch.000 3)"
+Sec. 2-20-64.,Prostandard residential police is required.,"(a)
+
+                If an subdivider shall be required with the ground plan application, and such notice that the
+               of this article.
+
+               It shall be accompanied by the owner of the provisions and shall be it will be required by
+                  has been paid to such street and for the state and other public and alley, the location of the
+                  department, for proposed to review and the city engineer, that the plans shall
+               Polaris or to the city council from the city.
+
+               (b)
+
+               The state fee shall be complied with the planning and land as a manner to prevent the
+               such city and the health of public property regulations.
+
+               (Code 2008, § 90.04)"
+Sec. 8-130.,Definitions.,"The city, or his words, in itsNULL
+                   .,General conditions in the city; premises by the operator or organization,
+               and the police is the authority to the proposed for all such system on an immediate
+               specific use or any ordinance
+---------------
+
+```
+Notice that the output employs similar words, symbols, and language as that of the municipal code. Running WhartonMunicode on the same dataset will return different outputs each time. 
