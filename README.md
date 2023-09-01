@@ -98,7 +98,7 @@ If all goes well, the output should print each iteration of training along with 
 
 ## Viewing sample.py
 
-Now that the model is trained, we can see view the language generation that mimics that of the original dataset:
+Now that the model is trained, we can view the language generation that mimics that of the original dataset by running
 
 ```
 !python sample.py --out_dir=out-municode-char --device=cpu
