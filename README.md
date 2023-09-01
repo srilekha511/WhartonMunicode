@@ -1,9 +1,9 @@
-# Wharton_Municode
+# WhartonMunicode
 A repository built off of [Andrej Karpathy's nanoGPT](https://github.com/karpathy/nanoGPT): a smaller scale version of ChatGPT able to run on your personal computer. 
 
 This repository is part of a project at the Wharton School of the University of Pennsylvania aiming to adopt large language models - such as ChatGPT - for use in the legal space. It aims to lay foundational work for future implementation in this area. 
 
-Wharton_Municode is designed, as the name suggests, to accept municipal codes as input. Input text to train the nanoGPT model was taken from [municode](https://library.municode.com/), a library containing over 3300 municipal codes for towns across the country. Below are beginner-friendly instructions for setting up and training the model on your own device. 
+WhartonMunicode is designed, as the name suggests, to accept municipal codes as input. Input text to train the nanoGPT model was taken from [municode](https://library.municode.com/), a library containing over 3300 municipal codes for towns across the country. Below are beginner-friendly instructions for setting up and training the model on your own device. 
 
 # Setup
 
@@ -31,9 +31,29 @@ This repository implements the same packages as nanoGPT:
 
   ## Using these Packages
 
-  Next, import these packages. This may take a few seconds to a minute depending on if these packages have been imported before, as well as the computing speed and power of your computer.
+  Next, import these packages. This may take a few seconds to a minute or two depending on if these packages have been imported before, as well as the computing speed and power of your computer.
 
   ```
   pip install transformers datasets tiktoken tqdm wandb numpy httpx torch
   ```
 
+# Working With WhartonMunicode
+
+## Cloning Repository
+
+Clone this repository to get a local copy in the platform of your choice. (Google Colab users will find the repository in the "Files" tab on the left hand vertical bar, while Jupyter Notebook users will find that the repository clones into the same folder path of the notebook)
+
+```
+!git clone https://github.com/srilekha511/Wharton_Municode
+```
+## Running prepare.py
+
+If you are in Google Colab:
+
+First change directories into the the municodes folder of this repository. Colab won't let you run files unless you are in the exact folder path containing it. Then, run the script prepare.py:
+```
+%cd /content/Wharton_Municode/data/municode
+!python prepare.py
+```
+
+Your output should return the file path of the `train.bin` and the `val.bin`, most likely `/content/Wharton_Municode/data/municode'
