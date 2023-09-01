@@ -103,7 +103,7 @@ Now that the model is trained, we can see view the language generation that mimi
 ```
 As before, change the `device` parameter to `cpu` or `gpu` as necessary. 
 
-`sample.py` should start to output language similar to the municipal codes that were inputted. Keep in mind that WhartonMunicode is an elementary LLM and therefore its outputs have no semantical significance (yet). More advanced LLMs such as ChatGPT employ supervised human labeling to rank outputs to optimize outputs. 
+`sample.py` should start to output language similar to the municipal codes that were inputted. Keep in mind that WhartonMunicode is an elementary LLM and therefore its outputs have no semantical significance (yet). More advanced LLMs such as ChatGPT employ [supervised human labeling](https://openai.com/blog/chatgpt) to rank outputs to optimize outputs. 
 
 Here is a short snippet of a sample output from training on the municipal code of Alvarado, TX:
 ```
