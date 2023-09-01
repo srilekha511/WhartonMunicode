@@ -31,7 +31,9 @@ from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
 # default config values designed to train a gpt2 (124M) on OpenWebText
+# When training WhartonMunicode on municipal code data, these parameters are overidden to make training more efficient.
 # I/O
+# -----------------------------------------------------------------------------
 out_dir = 'out'
 eval_interval = 2000
 log_interval = 1
