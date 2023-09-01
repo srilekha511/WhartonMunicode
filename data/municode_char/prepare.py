@@ -9,7 +9,7 @@ import pickle
 import requests
 import numpy as np
 
-data_url = 'https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt'
+data_url = 'https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt' # Change URL to municipal code of choice
 response = requests.get(data_url)
 
 if response.status_code == 200:
