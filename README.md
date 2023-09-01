@@ -56,4 +56,11 @@ First change directories into the the municodes folder of this repository. Colab
 !python prepare.py
 ```
 
-Your output should return the file path of the `train.bin` and the `val.bin`, most likely `/content/Wharton_Municode/data/municode'
+Your output should return the file path of the `train.bin` and the `val.bin`, most likely `/content/Wharton_Municode/data/municode`. The train.bin and val.bin files store the tokens of the training and validation files, respectively (tiktoken was used to tokenize the text to prepare it for training). 
+The output should also print the number of training and validation tokens there are. For example, if we loaded in the municipal code for the city of Alvarado, Texas (the default dataset in this repository), it should print
+
+```
+train has 585,895 tokens
+val has 64,881 tokens
+```
+The larger the number of tokens, the more data the machine learning algorithm can work with to make predictions. See `prepare.py` for a more in-depth explanation. 
