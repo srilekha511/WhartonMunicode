@@ -33,7 +33,7 @@ This repository implements the same packages as nanoGPT:
 
   ## Using these Packages
 
-  Next, import these packages. This may take a few seconds to a minute or two depending on if these packages have been imported before, as well as the computing speed and power of your computer.
+  Next, install these packages. This may take a few seconds to a minute or two depending on if these packages have been imported before, as well as the computing speed and power of your computer.
 
   ```
   pip install transformers datasets tiktoken tqdm wandb numpy httpx torch
