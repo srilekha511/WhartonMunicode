@@ -20,7 +20,7 @@ drive.mount('/content/drive')
 
 This repository implements the same packages as nanoGPT:
 
-- [transformers](https://pypi.org/project/transformers/): HuggingFace package, "thousands of pretrained models to perform tasks on different modalities such as text, vision, and audio"
+- [transformers](https://pypi.org/project/transformers/): HuggingFace package, contains pretrained models to perform tasks on text, vision, and audio
 - [datasets](https://pypi.org/project/datasets/): HuggingFace package, allows for more efficient data pre-processing
 - [tiktoken](https://github.com/openai/tiktoken): OpenAI's BPE tokenizer, takes in data and separates it into tokens for training
 - [tqdm](https://tqdm.github.io/): Python package for progress bars
