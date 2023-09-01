@@ -1,4 +1,4 @@
-# train a miniature character-level shakespeare model
+# train a miniature character-level municode model
 # good for debugging and playing on macbooks and such
 
 out_dir = 'out-municode-char'
@@ -13,7 +13,7 @@ wandb_log = False # override via command line if you like
 wandb_project = 'municode-char'
 wandb_run_name = 'mini-gpt'
 
-dataset = 'shakespeare_char'
+dataset = 'municode_char'
 gradient_accumulation_steps = 1
 batch_size = 64
 block_size = 256 # context of up to 256 previous characters
