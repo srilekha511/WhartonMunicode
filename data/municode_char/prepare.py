@@ -1,5 +1,5 @@
 """
-Prepare the Shakespeare dataset for character-level language modeling.
+Prepare the Municode dataset for character-level language modeling.
 So instead of encoding with GPT-2 BPE tokens, we just map characters to ints.
 Will save train.bin, val.bin containing the ids, and meta.pkl containing the
 encoder and decoder and some other related info.
@@ -9,19 +9,17 @@ import pickle
 import requests
 import numpy as np
 
-# download the tiny shakespeare dataset
-input_file_path = os.path.join(os.path.dirname(__file__), 'input.txt')
-if not os.path.exists(input_file_path):
-    data_url = 'https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt'
-    with open(input_file_path, 'w') as f:
-        f.write(requests.get(data_url).text)
+data_url = 'https://raw.githubusercontent.com/srilekha511/municode_files/main/AlvaradoTXComplete.txt'
+response = requests.get(data_url)
 
-with open(input_file_path, 'r') as f:
-    data = f.read()
-print(f"length of dataset in characters: {len(data):,}")
-
+if response.status_code == 200:
+    content = response.text
+else:
+    print("Failed to download data.")
+    content = None
+    
 # get all the unique characters that occur in this text
-chars = sorted(list(set(data)))
+chars = sorted(list(set(content)))
 vocab_size = len(chars)
 print("all the unique characters:", ''.join(chars))
 print(f"vocab size: {vocab_size:,}")
@@ -35,9 +33,9 @@ def decode(l):
     return ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string
 
 # create the train and test splits
-n = len(data)
-train_data = data[:int(n*0.9)]
-val_data = data[int(n*0.9):]
+n = len(content)
+train_data = content[:int(n*0.9)]
+val_data = content[int(n*0.9):]
 
 # encode both to integers
 train_ids = encode(train_data)
